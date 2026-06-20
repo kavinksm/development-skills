@@ -33,6 +33,7 @@ and Claude will invoke the relevant skill automatically.
 | Skill | Invoke | Auto-trigger phrases | Covers |
 |---|---|---|---|
 | `springboot` | `/springboot [area] [feature-name]` | "spring boot", "spring mvc", "rest controller", "jpa entity", "spring security", "junit test", "mockito", "@SpringBootTest" | Web layer, Data access, Security, Testing, Messaging, Caching, Actuator, Configuration, Build & Deploy |
+| `node-frontend` | `/node-frontend [area] [feature-name]` | "react component", "react hook", "useQuery", "zustand", "react router", "react hook form", "zod validation", "vitest", "playwright", "tailwind", "vite config", "frontend", "SPA" | Components & Hooks, State Management, Routing, Forms, API Client, Testing, Styling, Build & Deploy, Project Scaffold |
 
 ## Repository Layout
 
@@ -60,7 +61,7 @@ skills/<skill-name>/references/        # code reference templates loaded on dema
 
 - All configurable values must use placeholder variables — never hardcode names
 - Comment every non-obvious pattern with a brief explanation
-- Use the latest stable Spring Boot 3.x patterns (Jakarta EE, not javax)
+- Use the latest stable framework patterns (Spring Boot 3.x / React 19 / Vite 6)
 - Every code pattern must show matching test examples where applicable
-- Prefer constructor injection over field injection
-- Follow clean architecture: controller → service → repository layering
+- **Spring Boot**: prefer constructor injection; follow controller → service → repository layering
+- **Node Frontend**: use TypeScript strict mode; functional components only; TanStack Query for server state
